@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Home page - Scheduler</title>
+    </head>
+    <body>
+        hiii buddy
+        <form action='home' method='POST'>
+            {% csrf_token %}
+            <label for="stime" class="label">Starting Time of Meeting</label>
+            <input type="time" id="stime" class="input" name="stime" required>
+            <label for="etime" class="label">Ending Time of Meeting</label>
+            <input type="time" id="etime" class="input" name="etime" required>
+            <input type="submit" value="submit!">
+        </form>
+        <a href="logout">logout</a>
+    </body>
+</html>

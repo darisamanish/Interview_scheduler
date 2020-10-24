@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Register page - Scheduler</title>
+    </head>
+    <body>
+        <div class="form">
+            <form action="register" method="post">
+                {% csrf_token %}
+                <div style="font-family:cursive;color:black;">
+					{% for message in messages %}
+					<label>{{message}}</label>
+					{% endfor %}
+                </div>
+                <div class="group">
+                    <label for="fname" class="label">Firstname</label>
+                    <input id="fname" type="text" class="input" name="firstname" required>
+                </div>
+                <br>
+                <div class="group">
+                    <label for="lname" class="label">Lastname</label>
+                    <input id="lname" type="text" class="input" name="lastname" required>
+                </div>
+                <br>
+                <div class="group">
+					<label for="mail" class="label">Email Address</label>
+					<input id="mail" type="email" class="input" name="email" required>
+                </div>
+                <br>
+                <div class="group">
+                    <label for="user" class="label">Username</label>
+                    <input id="user" type="text" class="input" name="username" required>
+                </div>
+                <br>
+                <div class="group">
+                    <label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input" data-type="password" name="password" required>
+                </div>
+                <br>
+                <div class="group">
+                    <label for="re_pass" class="label">Re-enter Password</label>
+					<input id="re_pass" type="password" class="input" data-type="password" name="re_password" required>
+                </div>
+                <br>
+                <div class="group">
+					<input type="submit" class="button" value="Sign Up" >
+                </div>
+            </form>
+        </div>
+        <p>Already have an account?<a href="login"> login</a></p>
+    </body>
+</html>
